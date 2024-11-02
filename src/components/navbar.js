@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Navbar() {
     return(
-        <div className="w-full flex items-center p-4 justify-between uppercase text-2xl">
+        <div className="fixed top-0 w-full flex items-center p-4 justify-between uppercase text-xl md:text-2xl z-50 bg-background">
             <Link href={'/'} className="bg-white pr-4">
                 <Image
                 width={260}
