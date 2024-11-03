@@ -1,82 +1,77 @@
 [
-    {
-        "id": 1,
-        "name": "DLAUNE T-Shirt Basic Black",
-        "description": "Ein schlichtes schwarzes T-Shirt, perfekt für den täglichen Gebrauch.",
-        "category" : "t-shirt",
-        "price": 30,
-        "stock": {
-            "S": 50,
-            "M": 75,
-            "L": 100,
-            "XL": 60,
-            "XXL": 40
-        },
-        "colors": [
-            {
-                "color": "black",
-                "image_url": [
-                    "/FoldedFront-Basic.png", 
-                    "/FrontTee-Basic.png"
-                ]
-            }
-        ],
-        "tags": ["basic", "black", "casual", "unisex"]
+  {
+    "id": 1,
+    "name": "DLAUNE T-Shirt Basic Black",
+    "description": "Ein schlichtes schwarzes T-Shirt, perfekt für den täglichen Gebrauch.",
+    "category": "t-shirt",
+    "price": 30,
+    "stock": {
+      "S": 50,
+      "M": 75,
+      "L": 100,
+      "XL": 60,
+      "XXL": 40
     },
-    {
-        "id": 2,
-        "name": "DLAUNE Hoodie Skull Rose",
-        "description": "Stylischer Hoodie mit einem Skull und Rosen-Design, in Schwarz und Weiß erhältlich.",
-        "category": "hoodie",
-        "price": 60,
-        "stock": {
-            "S": 30,
-            "M": 45,
-            "L": 60,
-            "XL": 40,
-            "XXL": 25
-        },
-        "colors": [
-            {
-                "color": "black",
-                "image_url": [
-                    "/Hoodie-Basic-Black-Front.png", 
-                    "/Hoodie-Skull-Rose-Black-Back.png", 
-                    "/Hoodie-Skull-Rose-Black-Side.png"
-                ]
-            },
-            {
-                "color": "white",
-                "image_url": [
-                    "/Hoodie-Basic-White-Front.png", 
-                    "/Hoodie-Skull-Rose-White-Back.png", 
-                    "/Hoodie-Skull-Rose-White-Side.png"
-                ]            }
-        ],
-        "tags": ["skull", "rose", "black", "white", "graphic"]
+    "colors": [
+      {
+        "color": "black",
+        "image_url": ["/FoldedFront-Basic.png", "/FrontTee-Basic.png"]
+      }
+    ],
+    "tags": ["basic", "black", "casual", "unisex"]
+  },
+  {
+    "id": 2,
+    "name": "DLAUNE Hoodie Skull Rose",
+    "description": "Stylischer Hoodie mit einem Skull und Rosen-Design, in Schwarz und Weiß erhältlich.",
+    "category": "hoodie",
+    "price": 60,
+    "stock": {
+      "S": 30,
+      "M": 45,
+      "L": 60,
+      "XL": 40,
+      "XXL": 25
     },
-    {
-        "id": 3,
-        "name": "DLAUNE T-Shirt Rose",
-        "description": "Elegantes weißes T-Shirt mit einem Rosendesign, für einen stilvollen Auftritt.",
-        "category": "t-shirt",
-        "price": 35,
-        "stock": {
-            "S": 40,
-            "M": 60,
-            "L": 80,
-            "XL": 50,
-            "XXL": 30
-        },
-        "colors": [
-            {
-                "color": "white",
-                "image_url": [
-                    "/Hanger-Tee-Front-Rose.png",
-                    "/Hanger-Tee-back-Rose.png"
-                ]
-            }
-        ],
-        "tags": ["rose", "white", "stylish", "unisex"]
-    }
+    "colors": [
+      {
+        "color": "black",
+        "image_url": [
+          "/Hoodie-Basic-Black-Front.png",
+          "/Hoodie-Skull-Rose-Black-Back.png",
+          "/Hoodie-Skull-Rose-Black-Side.png"
+        ]
+      },
+      {
+        "color": "white",
+        "image_url": [
+          "/Hoodie-Basic-Front-White.png",
+          "/Hoodie-Skull-Rose-White-Back.png",
+          "/Hoodie-Skull-Rose-White-Side.png"
+        ]
+      }
+    ],
+    "tags": ["skull", "rose", "black", "white", "graphic"]
+  },
+  {
+    "id": 3,
+    "name": "DLAUNE T-Shirt Rose",
+    "description": "Elegantes weißes T-Shirt mit einem Rosendesign, für einen stilvollen Auftritt.",
+    "category": "t-shirt",
+    "price": 35,
+    "stock": {
+      "S": 40,
+      "M": 60,
+      "L": 80,
+      "XL": 50,
+      "XXL": 30
+    },
+    "colors": [
+      {
+        "color": "white",
+        "image_url": ["/Hanger-Tee-Front-Rose.png", "/Hanger-Tee-back-Rose.png"]
+      }
+    ],
+    "tags": ["rose", "white", "stylish", "unisex"]
+  }
 ]

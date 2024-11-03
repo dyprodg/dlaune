@@ -6,34 +6,44 @@ export default function Home() {
   return (
     <div className="mt-24 text-foreground flex flex-col w-full">
       <div className="flex ml-4 md:ml-16 mt-24 mb-24 md:mb-28">
-        <h1 className="text-6xl md:text-[10rem]">premium. <br /> minimalistic. <br/> clothings.</h1>
+        <h1 className="text-6xl md:text-[10rem]">
+          premium. <br /> minimalistic. <br /> clothings.
+        </h1>
       </div>
 
       {/* Trending */}
       <div className="flex space-x-4 ml-4 md:ml-12">
         <span className="text-neutral-600 font-bold">new</span>
-        <span className="text-4xl md:text-7xl uppercase font-bold">Collection</span>
+        <span className="text-4xl md:text-7xl uppercase font-bold">
+          Collection
+        </span>
       </div>
       <div className="w-full border my-4"></div>
       <div className="w-full flex flex-col md:flex-row  mt-4 overflow-hidden">
-        <Link className="md:w-1/3 h-[400px] hover:scale-105 transition ease-out duration-200 mb-8" href={'/shop'}>
-          <Image 
+        <Link
+          className="md:w-1/3 h-[400px] hover:scale-105 transition ease-out duration-200 mb-8"
+          href={"/shop"}
+        >
+          <Image
             quality={100}
-            src='/Labels-Tag-Dlaune.png'
+            src="/Labels-Tag-Dlaune.png"
             alt="T-Shirt-Collection"
             width={400}
             height={400}
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            style={{ objectFit: "cover", width: "100%", height: "100%" }}
           />
         </Link>
-        <Link className="md:w-2/3 h-[400px] hover:scale-105 transition ease-out duration-200 mb-8" href={'/shop'}>
-          <Image 
+        <Link
+          className="md:w-2/3 h-[400px] hover:scale-105 transition ease-out duration-200 mb-8"
+          href={"/shop"}
+        >
+          <Image
             quality={100}
-            src='/Hoodies.png'
+            src="/Hoodies.png"
             alt="Hoodies-Collection"
             width={800}
             height={400}
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            style={{ objectFit: "cover", width: "100%", height: "100%" }}
           />
         </Link>
       </div>
@@ -45,24 +55,30 @@ export default function Home() {
       </div>
       <div className="w-full border my-4"></div>
       <div className="w-full flex flex-col md:flex-row  mt-4 overflow-hidden">
-        <Link className="hover:scale-105 transition ease-out duration-200 mb-8" href={'/shop'}>
-          <Image 
+        <Link
+          className="hover:scale-105 transition ease-out duration-200 mb-8"
+          href={"/shop"}
+        >
+          <Image
             quality={100}
-            src='/Hanger-Tee-Front-Rose.png'
+            src="/Hanger-Tee-Front-Rose.png"
             alt="Hanger-Tee-Back-Rose"
             width={800}
             height={800}
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            style={{ objectFit: "cover", width: "100%", height: "100%" }}
           />
         </Link>
-        <Link className="hover:scale-105 transition ease-out duration-200 mb-8" href={'/shop'}>
-          <Image 
+        <Link
+          className="hover:scale-105 transition ease-out duration-200 mb-8"
+          href={"/shop"}
+        >
+          <Image
             quality={100}
-            src='/Hoodie-Basic-Black-Front.png'
+            src="/Hoodie-Basic-Black-Front.png"
             alt="Hoodies-Collection"
             width={800}
             height={800}
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            style={{ objectFit: "cover", width: "100%", height: "100%" }}
           />
         </Link>
       </div>
@@ -70,17 +86,14 @@ export default function Home() {
       {/* About */}
       <div className="flex space-x-4 ml-4 md:mt-12">
         <span className="text-neutral-600 font-bold">02</span>
-        <span className="text-4xl md:text-7xl uppercase font-bold">about us</span>
+        <span className="text-4xl md:text-7xl uppercase font-bold">
+          about us
+        </span>
       </div>
       <div className="w-full border my-4"></div>
       <div className="w-full flex flex-col md:flex-row p-8 justify-evenly items-center space-x-8">
         <div>
-          <Image
-            src={'/Dlaune-Logo.svg'}
-            alt="Logo"
-            width={400}
-            height={400}
-          />
+          <Image src={"/Dlaune-Logo.svg"} alt="Logo" width={400} height={400} />
         </div>
         <div className="text-4xl md:text-5xl md:w-1/2 uppercase font-bold">
           Our goal is to deliver modern, minimalistic, premium-quality clothing.
@@ -93,28 +106,45 @@ export default function Home() {
       </div>
       <div className="w-full my-8">
         <div className="text-xl md:text-2xl md:w-1/2 uppercase text-center md:text-start md:ml-12 text-neutral-700">
-          Each piece is crafted with attention to detail, ensuring longevity and style. We prioritize sustainable practices and high-quality materials to provide a product that meets our rigorous standards. Designed for those who value both elegance and durability.
+          Each piece is crafted with attention to detail, ensuring longevity and
+          style. We prioritize sustainable practices and high-quality materials
+          to provide a product that meets our rigorous standards. Designed for
+          those who value both elegance and durability.
         </div>
       </div>
 
       {/* Socials */}
       <div className="flex space-x-4 ml-4 md:mt-12">
         <span className="text-neutral-600 font-bold">03</span>
-        <span className="text-4xl md:text-7xl uppercase font-bold">Socials</span>
+        <span className="text-4xl md:text-7xl uppercase font-bold">
+          Socials
+        </span>
       </div>
       <div className="w-full border my-4"></div>
 
       <div className="flex space-x-8 justify-center md:justify-start md:ml-12 my-8">
-        <a href="#" className="text-neutral-600 hover:text-neutral-800 text-3xl hover:scale-105 transition ease-out duration-200">
+        <a
+          href="#"
+          className="text-neutral-600 hover:text-neutral-800 text-3xl hover:scale-105 transition ease-out duration-200"
+        >
           <FaInstagram />
         </a>
-        <a href="#" className="text-neutral-600 hover:text-neutral-800 text-3xl hover:scale-105 transition ease-out duration-200">
+        <a
+          href="#"
+          className="text-neutral-600 hover:text-neutral-800 text-3xl hover:scale-105 transition ease-out duration-200"
+        >
           <FaFacebook />
         </a>
-        <a href="#" className="text-neutral-600 hover:text-neutral-800 text-3xl hover:scale-105 transition ease-out duration-200">
+        <a
+          href="#"
+          className="text-neutral-600 hover:text-neutral-800 text-3xl hover:scale-105 transition ease-out duration-200"
+        >
           <FaTwitter />
         </a>
-        <a href="#" className="text-neutral-600 hover:text-neutral-800 text-3xl hover:scale-105 transition ease-out duration-200">
+        <a
+          href="#"
+          className="text-neutral-600 hover:text-neutral-800 text-3xl hover:scale-105 transition ease-out duration-200"
+        >
           <FaTiktok />
         </a>
       </div>
@@ -129,7 +159,8 @@ export default function Home() {
         <p>VAT-ID: CHE-123.456.789</p>
         <p>Managing Director: John Doe</p>
         <p className="mt-4 text-sm">
-          Disclaimer: This is a fictitious company, created for demonstration purposes only.
+          Disclaimer: This is a fictitious company, created for demonstration
+          purposes only.
         </p>
       </div>
     </div>

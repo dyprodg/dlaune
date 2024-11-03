@@ -3,8 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import SmoothScrolling from "@/utils/SmoothScrolling";
 
-
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -28,10 +26,8 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <SmoothScrolling>
-
-        
-        <Navbar />
-        {children}
+          <Navbar />
+          {children}
         </SmoothScrolling>
       </body>
     </html>
