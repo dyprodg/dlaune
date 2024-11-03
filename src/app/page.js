@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="mt-24 text-foreground flex flex-col w-full">
       <div className="flex ml-4 md:ml-16 mt-24 mb-24 md:mb-28">
-        <h1 className="text-6xl md:text-[10rem]">premium. <br /> minimalistic.</h1>
+        <h1 className="text-6xl md:text-[10rem]">premium. <br /> minimalistic. <br/> clothings.</h1>
       </div>
 
       {/* Trending */}
@@ -103,40 +103,6 @@ export default function Home() {
         <span className="text-4xl md:text-7xl uppercase font-bold">Socials</span>
       </div>
       <div className="w-full border my-4"></div>
-
-      <div className="w-full flex flex-col md:flex-row  mt-4 overflow-hidden">
-        <div className="md:w-1/3 h-[400px] mb-8" >
-          <Image 
-            quality={100}
-            src='/social-1.JPG'
-            alt="Model"
-            width={400}
-            height={400}
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-          />
-        </div>
-        <div className="md:w-1/3 h-[400px] mb-8">
-          <Image 
-            quality={100}
-            src='/social-2.JPG'
-            alt="me-working"
-            width={800}
-            height={400}
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-          />
-        </div>
-        <div className="md:w-1/3 h-[400px] mb-8">
-          <Image 
-            className="bg-white"
-            quality={100}
-            src='/Rose.svg'
-            alt="rose"
-            width={800}
-            height={400}
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-          />
-        </div>
-      </div>
 
       <div className="flex space-x-8 justify-center md:justify-start md:ml-12 my-8">
         <a href="#" className="text-neutral-600 hover:text-neutral-800 text-3xl hover:scale-105 transition ease-out duration-200">
