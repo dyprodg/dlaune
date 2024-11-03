@@ -4,6 +4,8 @@ import { useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { LuRefreshCwOff } from "react-icons/lu";
+import ProductGrid from "@/components/shop/ProductGrid";
+import productsData from './products.json';
 
 export default function Shop() {
     const [category, setCategory] = useState("Category");
@@ -17,6 +19,7 @@ export default function Shop() {
     const categories = ["T-Shirt", "Hoodie"];
     const colors = ["Black", "White"];
     const sizes = ["S", "M", "L", "XL", "XXL"];
+    const products = productsData;
 
     return (
         <div className="w-full mt-24 px-4 md:px-6">
@@ -133,6 +136,7 @@ export default function Shop() {
                     </button>
                 </div>
             </div>
+            <ProductGrid products={products} />
         </div>
     );
 }
