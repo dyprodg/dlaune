@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Schleife durch alle PNG-Dateien im aktuellen Verzeichnis
+# Schleife durch alle PNG-Dateien im Verzeichnis
 for file in *.png; do
   # Setze den neuen Dateinamen mit -low.png
   new_file="${file%.png}-low.png"
