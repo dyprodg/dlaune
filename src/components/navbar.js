@@ -13,6 +13,8 @@ export default function Navbar() {
           alt="logo"
           src={"/DLAUNE-PRINT.svg"}
           className="hover:scale-110 transition ease-out duration-100 md:ml-4"
+          loading="eager" 
+          priority 
         />
       </Link>
       <Link href={"/shop"} className="hover:underline">

@@ -23,6 +23,8 @@ function ProductCard({ product }) {
               width={1000}
               height={1000}
               className="object-contain"
+              loading="eager" 
+              priority 
             />
           </motion.div>
         </div>

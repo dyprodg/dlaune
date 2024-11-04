@@ -74,6 +74,7 @@ export default function ProductPage({ params }) {
               width={2000}
               height={2000}
               objectFit="cover"
+              loading="eager"
             />
           </motion.div>
         </AnimatePresence>
@@ -91,6 +92,8 @@ export default function ProductPage({ params }) {
             width={2000}
             height={2000}
             objectFit="cover"
+            loading="eager" 
+            priority 
           />
         </div>
 
@@ -130,6 +133,8 @@ export default function ProductPage({ params }) {
                   width={80}
                   height={80}
                   objectFit="cover"
+                  loading="eager" 
+                  riority 
                 />
               </button>
             ))}

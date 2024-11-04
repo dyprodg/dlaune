@@ -31,6 +31,8 @@ export default function Home() {
             width={400}
             height={400}
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
+            loading="eager" 
+            priority 
           />
         </Link>
         <Link
@@ -44,6 +46,8 @@ export default function Home() {
             width={800}
             height={400}
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
+            loading="eager" 
+            priority 
           />
         </Link>
       </div>
@@ -66,6 +70,8 @@ export default function Home() {
             width={800}
             height={800}
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
+            loading="eager" 
+            priority 
           />
         </Link>
         <Link
@@ -79,6 +85,8 @@ export default function Home() {
             width={800}
             height={800}
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
+            loading="eager" 
+            priority 
           />
         </Link>
       </div>
