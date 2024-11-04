@@ -60,9 +60,9 @@
     "category": "t-shirt",
     "price": 35,
     "stock": {
-      "S": 40,
+      "S": 0,
       "M": 60,
-      "L": 80,
+      "L": 0,
       "XL": 50,
       "XXL": 30
     },
