@@ -20,15 +20,15 @@ export default function ProductPage({ params }) {
   const sizeParam = searchParams.get("size");
 
   const product = productsData.find((p) => p.id === parseInt(id));
-  
+
   const availableColors = product?.colors.map((c) => c.color) || [];
   const availableSizes = product ? Object.keys(product.stock) : [];
 
   const [selectedColor, setSelectedColor] = useState(
-    colorParam || availableColors[0]
+    colorParam || availableColors[0],
   );
   const [selectedSize, setSelectedSize] = useState(
-    sizeParam || availableSizes[0]
+    sizeParam || availableSizes[0],
   );
 
   useEffect(() => {
@@ -79,20 +79,20 @@ export default function ProductPage({ params }) {
         </AnimatePresence>
       </div>
       <div className="w-full flex flex-col justify-between items-center">
-          <div
-            key={currentImageIndex}
-            custom={direction}
-            className="w-full bg-white block lg:hidden"
-          >
-            <Image
-              quality={40}
-              src={images[currentImageIndex]}
-              alt={`${product.name} ${selectedColor}`}
-              width={2000}
-              height={2000}
-              objectFit="cover"
-            />
-          </div>
+        <div
+          key={currentImageIndex}
+          custom={direction}
+          className="w-full bg-white block lg:hidden"
+        >
+          <Image
+            quality={40}
+            src={images[currentImageIndex]}
+            alt={`${product.name} ${selectedColor}`}
+            width={2000}
+            height={2000}
+            objectFit="cover"
+          />
+        </div>
 
         {/* Picture Slider */}
         <div className="w-full flex items-center justify-center z-30 relative bg-white p-2">
@@ -149,7 +149,7 @@ export default function ProductPage({ params }) {
 
         <div className="w-full mt-4 justify-center flex md:justify-end">
           <div className="relative z-30 w-[300px] md:m-12">
-            {/* Farbauswahl */}
+            {/* Colors */}
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-2 text-black uppercase bg-white rounded-full p-2">
                 Color:
@@ -182,7 +182,7 @@ export default function ProductPage({ params }) {
               </div>
             </div>
 
-            {/* Größenauswahl */}
+            {/* Sizes */}
             <div className="mb-6">
               <h3 className="text-xl font-semibold mb-2 uppercase text-black bg-white rounded-full p-2">
                 Size:
@@ -213,14 +213,14 @@ export default function ProductPage({ params }) {
               </div>
             </div>
 
-            {/* Verfügbarkeitsanzeige */}
+            {/* Availability */}
             {!isSizeAvailable && (
               <p className="text-red-600 mb-4">
                 Diese Größe ist derzeit nicht verfügbar.
               </p>
             )}
 
-            {/* Kaufen-Button */}
+            {/* Add to Cart */}
             <button
               disabled={!isSizeAvailable}
               className={`w-full py-3 rounded-md text-white font-semibold uppercase ${
