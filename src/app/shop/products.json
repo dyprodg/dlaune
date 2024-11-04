@@ -15,7 +15,16 @@
     "colors": [
       {
         "color": "black",
-        "image_url": ["/FoldedFront-Basic.png", "/FrontTee-Basic.png"]
+        "image_url": [
+          {
+            "high_res": "/FoldedFront-Basic.png",
+            "low_res": "/FoldedFront-Basic-low.png"
+          },
+          {
+            "high_res": "/FrontTee-Basic.png",
+            "low_res": "/FrontTee-Basic-low.png"
+          }
+        ]
       }
     ],
     "tags": ["basic", "black", "casual", "unisex"]
@@ -37,17 +46,35 @@
       {
         "color": "black",
         "image_url": [
-          "/Hoodie-Basic-Black-Front.png",
-          "/Hoodie-Skull-Rose-Black-Back.png",
-          "/Hoodie-Skull-Rose-Black-Side.png"
+          {
+            "high_res": "/Hoodie-Basic-Black-Front.png",
+            "low_res": "/Hoodie-Basic-Black-Front-low.png"
+          },
+          {
+            "high_res": "/Hoodie-Skull-Rose-Black-Back.png",
+            "low_res": "/Hoodie-Skull-Rose-Black-Back-low.png"
+          },
+          {
+            "high_res": "/Hoodie-Skull-Rose-Black-Side.png",
+            "low_res": "/Hoodie-Skull-Rose-Black-Side-low.png"
+          }
         ]
       },
       {
         "color": "white",
         "image_url": [
-          "/Hoodie-Basic-Front-White.png",
-          "/Hoodie-Skull-Rose-White-Back.png",
-          "/Hoodie-Skull-Rose-White-Side.png"
+          {
+            "high_res": "/Hoodie-Basic-Front-White.png",
+            "low_res": "/Hoodie-Basic-Front-White-low.png"
+          },
+          {
+            "high_res": "/Hoodie-Skull-Rose-White-Back.png",
+            "low_res": "/Hoodie-Skull-Rose-White-Back-low.png"
+          },
+          {
+            "high_res": "/Hoodie-Skull-Rose-White-Side.png",
+            "low_res": "/Hoodie-Skull-Rose-White-Side-low.png"
+          }
         ]
       }
     ],
@@ -69,7 +96,16 @@
     "colors": [
       {
         "color": "white",
-        "image_url": ["/Hanger-Tee-Front-Rose.png", "/Hanger-Tee-back-Rose.png"]
+        "image_url": [
+          {
+            "high_res": "/Hanger-Tee-Front-Rose.png",
+            "low_res": "/Hanger-Tee-Front-Rose-low.png"
+          },
+          {
+            "high_res": "/Hanger-Tee-back-Rose.png",
+            "low_res": "/Hanger-Tee-back-Rose-low.png"
+          }
+        ]
       }
     ],
     "tags": ["rose", "white", "stylish", "unisex"]

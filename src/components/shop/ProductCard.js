@@ -18,13 +18,13 @@ function ProductCard({ product }) {
             transition={{ duration: 1 }}
           >
             <Image
-              src={imageUrl}
+              src={imageUrl.high_res}
               alt={product.name}
               width={1000}
               height={1000}
               className="object-contain"
-              loading="eager" 
-              priority 
+              blurDataURL={imageUrl.low_res}
+              placeholder="blur"
             />
           </motion.div>
         </div>

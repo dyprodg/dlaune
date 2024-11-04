@@ -31,8 +31,8 @@ export default function Home() {
             width={400}
             height={400}
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
-            loading="eager" 
-            priority 
+            placeholder="blur"
+            blurDataURL="/Labels-Tag-Dlaune-low.png"
           />
         </Link>
         <Link
@@ -46,8 +46,8 @@ export default function Home() {
             width={800}
             height={400}
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
-            loading="eager" 
-            priority 
+            placeholder="blur"
+            blurDataURL="/Hoodies-low.png"
           />
         </Link>
       </div>
@@ -70,8 +70,8 @@ export default function Home() {
             width={800}
             height={800}
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
-            loading="eager" 
-            priority 
+            placeholder="blur"
+            blurDataURL="/Hanger-Tee-Front-Rose-low.png"
           />
         </Link>
         <Link
@@ -85,8 +85,8 @@ export default function Home() {
             width={800}
             height={800}
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
-            loading="eager" 
-            priority 
+            placeholder="blur"
+            blurDataURL="/Hoodie-Basic-Black-Front-low.png"
           />
         </Link>
       </div>

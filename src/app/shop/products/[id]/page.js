@@ -68,13 +68,13 @@ export default function ProductPage({ params }) {
             className="absolute w-full bg-white hidden lg:block"
           >
             <Image
-              quality={40}
-              src={images[currentImageIndex]}
+              quality={100}
+              src={images[currentImageIndex].high_res}
               alt={`${product.name} ${selectedColor}`}
               width={2000}
               height={2000}
-              objectFit="cover"
-              loading="eager"
+              placeholder="blur"
+              blurDataURL={images[currentImageIndex].low_res}
             />
           </motion.div>
         </AnimatePresence>
@@ -86,14 +86,13 @@ export default function ProductPage({ params }) {
           className="w-full bg-white block lg:hidden"
         >
           <Image
-            quality={40}
-            src={images[currentImageIndex]}
+            quality={100}
+            src={images[currentImageIndex].high_res}
             alt={`${product.name} ${selectedColor}`}
             width={2000}
             height={2000}
-            objectFit="cover"
-            loading="eager" 
-            priority 
+            placeholder="blur"
+            blurDataURL={images[currentImageIndex].low_res}
           />
         </div>
 
@@ -128,13 +127,12 @@ export default function ProductPage({ params }) {
                 }`}
               >
                 <Image
-                  src={imgSrc}
+                  src={imgSrc.high_res}
                   alt={`${product.name} ${selectedColor} thumbnail`}
                   width={80}
                   height={80}
-                  objectFit="cover"
-                  loading="eager" 
-                  riority 
+                  blurDataURL={imgSrc.low_res}
+                  placeholder="blur"
                 />
               </button>
             ))}
