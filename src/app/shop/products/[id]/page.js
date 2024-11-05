@@ -7,7 +7,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import { handleAddToCart } from "@/utils/CookieCartAdd";
+import { handleAddToCart } from "@/utils/CardManagement/CookieCartAdd";
 
 export default function ProductPage({ params }) {
   const { id } = params;
