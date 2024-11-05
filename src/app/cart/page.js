@@ -3,6 +3,7 @@ import { getCartProductDetails } from "@/utils/CardManagement/GetCartDetails";
 import { updateCartItemQuantity, removeCartItem } from "@/utils/CardManagement/UpdateCard";
 import { useEffect, useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
@@ -47,9 +48,11 @@ export default function Cart() {
           {cartItems.map((item, index) => (
             <div key={index} className="flex justify-between items-center p-4 border-b">
               <div className="flex items-center space-x-4">
-                <img
+                <Image
                   src={item.imageUrl}
                   alt={item.name}
+                  width={300}
+                  height={300}
                   className="w-20 h-20 object-cover bg-white"
                 />
                 <div>
