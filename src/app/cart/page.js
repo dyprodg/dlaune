@@ -41,7 +41,7 @@ export default function Cart() {
   }, 0);
 
   return (
-    <div className="mt-24 w-full flex flex-col items-center">
+    <div className="mt-24 w-full flex flex-col items-center px-4">
       <h1 className="text-3xl font-bold mb-8 uppercase">Cart</h1>
 
       {cartItems.length === 0 ? (
@@ -51,7 +51,7 @@ export default function Cart() {
           {cartItems.map((item, index) => (
             <div
               key={index}
-              className="flex justify-between items-center p-4 border-b"
+              className="flex flex-col md:flex-row md:justify-between md:items-center p-4 border-b space-y-4 md:space-y-0"
             >
               <div className="flex items-center space-x-4">
                 <Image
@@ -62,12 +62,12 @@ export default function Cart() {
                   className="w-20 h-20 object-cover bg-white"
                 />
                 <div>
-                  <p className="text-xl font-semibold">{item.name}</p>
+                  <p className="text-lg md:text-xl font-semibold">{item.name}</p>
                   <p className="text-sm">Color: {item.color}</p>
                   <p className="text-sm">Size: {item.size}</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center justify-between md:space-x-4 mt-4 md:mt-0 space-x-2 md:justify-start">
                 {/* Minus Button */}
                 <button
                   onClick={() =>
@@ -98,8 +98,8 @@ export default function Cart() {
                 >
                   +
                 </button>
-                {/* Prize */}
-                <p className="text-lg font-semibold">
+                {/* Price */}
+                <p className="text-lg font-semibold hidden md:block">
                   {(item.price * item.quantity).toFixed(0)} CHF
                 </p>
                 {/* Delete Button */}
@@ -112,15 +112,19 @@ export default function Cart() {
                   <FaRegTrashAlt />
                 </button>
               </div>
+              {/* Display Price separately on mobile */}
+              <p className="text-lg font-semibold md:hidden mt-2">
+                {(item.price * item.quantity).toFixed(0)} CHF
+              </p>
             </div>
           ))}
           {/* Summary */}
-          <div className="flex justify-between items-center mt-6 px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center mt-6 px-4 space-y-4 md:space-y-0">
             <p className="text-2xl font-bold">Summary:</p>
             <p className="text-2xl font-bold">{totalPrice.toFixed(0)} CHF</p>
           </div>
-          <div className="mt-6">
-            <button className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800">
+          <div className="mt-6 flex justify-center">
+            <button className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 w-full md:w-auto">
               Submit Order
             </button>
           </div>
