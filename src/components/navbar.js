@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Link from "next/link";
 import { FiShoppingCart } from "react-icons/fi";
 import Image from "next/image";
@@ -10,7 +10,9 @@ export default function Navbar() {
 
   useEffect(() => {
     // Hole den Cookie-Wert und parse den Warenkorb
-    const currentCart = Cookies.get("cart") ? JSON.parse(Cookies.get("cart")) : [];
+    const currentCart = Cookies.get("cart")
+      ? JSON.parse(Cookies.get("cart"))
+      : [];
     // Anzahl der Produkte (nicht die Menge der einzelnen Artikel) im Warenkorb
     setCartCount(currentCart.length);
   }, []); // Leer-Array als Dependency sorgt dafür, dass dies nur beim Initialisieren der Komponente ausgeführt wird

@@ -17,7 +17,7 @@ export const handleAddToCart = (id, color, size, quantity) => {
     (item) =>
       item.id === cartItem.id &&
       item.color === cartItem.color &&
-      item.size === cartItem.size
+      item.size === cartItem.size,
   );
 
   if (existingItemIndex !== -1) {

@@ -12,7 +12,7 @@ export const getCartProductDetails = () => {
     if (product) {
       // Finde die Farbe, die mit der im Warenkorb übereinstimmt
       const colorData = product.colors.find(
-        (color) => color.color === cartItem.color
+        (color) => color.color === cartItem.color,
       );
 
       return {

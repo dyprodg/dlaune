@@ -54,11 +54,10 @@ export default function ProductPage({ params }) {
     router.replace(`/shop/products/${id}?${params.toString()}`);
   };
 
-    // Handler for quantity change
+  // Handler for quantity change
   const handleQuantityChange = (change) => {
     setQuantity((prevQuantity) => Math.max(1, prevQuantity + change));
   };
-
 
   return (
     <div className="flex flex-col mt-24 w-full min-h-screen md:min-h-[150vh] lg:min-h-[200vh] pb-12 bg-white">
@@ -193,27 +192,29 @@ export default function ProductPage({ params }) {
                 })}
               </div>
             </div>
-            
+
             <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-2 uppercase text-black bg-white rounded-full p-2">
-                  Quantity:
-                </h3>
-                <div className="flex justify-center items-center space-x-4">
-                  <button
-                    onClick={() => handleQuantityChange(-1)}
-                    className="px-4 py-2 bg-neutral-800 text-white rounded-md"
-                  >
-                    -
-                  </button>
-                  <span className="text-xl bg-neutral-800 py-1 px-3 rounded-full">{quantity}</span>
-                  <button
-                    onClick={() => handleQuantityChange(1)}
-                    className="px-4 py-2 bg-neutral-800 text-white rounded-md"
-                  >
-                    +
-                  </button>
-                </div>
+              <h3 className="text-xl font-semibold mb-2 uppercase text-black bg-white rounded-full p-2">
+                Quantity:
+              </h3>
+              <div className="flex justify-center items-center space-x-4">
+                <button
+                  onClick={() => handleQuantityChange(-1)}
+                  className="px-4 py-2 bg-neutral-800 text-white rounded-md"
+                >
+                  -
+                </button>
+                <span className="text-xl bg-neutral-800 py-1 px-3 rounded-full">
+                  {quantity}
+                </span>
+                <button
+                  onClick={() => handleQuantityChange(1)}
+                  className="px-4 py-2 bg-neutral-800 text-white rounded-md"
+                >
+                  +
+                </button>
               </div>
+            </div>
 
             {/* Sizes */}
             <div className="mb-6">
@@ -255,7 +256,14 @@ export default function ProductPage({ params }) {
 
             {/* Add to Cart */}
             <button
-              onClick={() => handleAddToCart(product.id, selectedColor, selectedSize, quantity)}
+              onClick={() =>
+                handleAddToCart(
+                  product.id,
+                  selectedColor,
+                  selectedSize,
+                  quantity,
+                )
+              }
               disabled={!isSizeAvailable}
               className={`w-full py-3 rounded-md text-white font-semibold uppercase ${
                 isSizeAvailable

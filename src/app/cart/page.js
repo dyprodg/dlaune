@@ -1,6 +1,9 @@
-'use client'
+"use client";
 import { getCartProductDetails } from "@/utils/CardManagement/GetCartDetails";
-import { updateCartItemQuantity, removeCartItem } from "@/utils/CardManagement/UpdateCard";
+import {
+  updateCartItemQuantity,
+  removeCartItem,
+} from "@/utils/CardManagement/UpdateCard";
 import { useEffect, useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import Image from "next/image";
@@ -46,7 +49,10 @@ export default function Cart() {
       ) : (
         <div className="w-full max-w-2xl">
           {cartItems.map((item, index) => (
-            <div key={index} className="flex justify-between items-center p-4 border-b">
+            <div
+              key={index}
+              className="flex justify-between items-center p-4 border-b"
+            >
               <div className="flex items-center space-x-4">
                 <Image
                   src={item.imageUrl}
@@ -64,7 +70,14 @@ export default function Cart() {
               <div className="flex items-center space-x-4">
                 {/* Minus Button */}
                 <button
-                  onClick={() => handleQuantityChange(item.id, item.color, item.size, item.quantity - 1)}
+                  onClick={() =>
+                    handleQuantityChange(
+                      item.id,
+                      item.color,
+                      item.size,
+                      item.quantity - 1,
+                    )
+                  }
                   className="px-2 py-1 border rounded"
                 >
                   -
@@ -73,16 +86,27 @@ export default function Cart() {
                 <span className="text-lg">{item.quantity}</span>
                 {/* Plus Button */}
                 <button
-                  onClick={() => handleQuantityChange(item.id, item.color, item.size, item.quantity + 1)}
+                  onClick={() =>
+                    handleQuantityChange(
+                      item.id,
+                      item.color,
+                      item.size,
+                      item.quantity + 1,
+                    )
+                  }
                   className="px-2 py-1 border rounded"
                 >
                   +
                 </button>
                 {/* Preis */}
-                <p className="text-lg font-semibold">{(item.price * item.quantity).toFixed(0)} CHF</p>
+                <p className="text-lg font-semibold">
+                  {(item.price * item.quantity).toFixed(0)} CHF
+                </p>
                 {/* Entfernen Button */}
                 <button
-                  onClick={() => handleRemoveItem(item.id, item.color, item.size)}
+                  onClick={() =>
+                    handleRemoveItem(item.id, item.color, item.size)
+                  }
                   className="px-2 py-1 border rounded"
                 >
                   <FaRegTrashAlt />
