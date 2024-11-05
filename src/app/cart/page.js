@@ -12,29 +12,29 @@ export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    // Warenkorb-Daten mit Details abrufen
+    // get cart items
     const cartDetails = getCartProductDetails();
     setCartItems(cartDetails);
   }, []);
 
-  // Funktion zum Aktualisieren der Menge eines Artikels
+  // update quantity
   const handleQuantityChange = (id, color, size, newQuantity) => {
     if (newQuantity > 0) {
       updateCartItemQuantity(id, color, size, newQuantity);
     } else {
       removeCartItem(id, color, size);
     }
-    // Aktualisiere den Warenkorb
+    // refresh cart
     setCartItems(getCartProductDetails());
   };
 
-  // Funktion zum Entfernen eines Artikels
+  // delete item
   const handleRemoveItem = (id, color, size) => {
     removeCartItem(id, color, size);
     setCartItems(getCartProductDetails());
   };
 
-  // Berechne die Gesamtsumme
+  // summary
   const totalPrice = cartItems.reduce((total, item) => {
     const itemTotal = item.price * item.quantity;
     return total + itemTotal;
@@ -82,7 +82,7 @@ export default function Cart() {
                 >
                   -
                 </button>
-                {/* Quantity Anzeige */}
+                {/* Quantity */}
                 <span className="text-lg">{item.quantity}</span>
                 {/* Plus Button */}
                 <button
@@ -98,11 +98,11 @@ export default function Cart() {
                 >
                   +
                 </button>
-                {/* Preis */}
+                {/* Prize */}
                 <p className="text-lg font-semibold">
                   {(item.price * item.quantity).toFixed(0)} CHF
                 </p>
-                {/* Entfernen Button */}
+                {/* Delete Button */}
                 <button
                   onClick={() =>
                     handleRemoveItem(item.id, item.color, item.size)
@@ -114,7 +114,7 @@ export default function Cart() {
               </div>
             </div>
           ))}
-          {/* Gesamtsumme */}
+          {/* Summary */}
           <div className="flex justify-between items-center mt-6 px-4">
             <p className="text-2xl font-bold">Summary:</p>
             <p className="text-2xl font-bold">{totalPrice.toFixed(0)} CHF</p>

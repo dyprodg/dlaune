@@ -4,13 +4,13 @@ import { GetCart } from "./GetCart";
 export const getCartProductDetails = () => {
   const cart = GetCart();
 
-  // Erstelle eine Liste von Produktdetails basierend auf den im Warenkorb vorhandenen IDs
+  // Create a list of product details based on the IDs present in the cart
   const productDetails = cart.map((cartItem) => {
-    // Finde das Produkt basierend auf der ID
+    // Find the product based on the ID
     const product = productsData.find((item) => item.id === cartItem.id);
 
     if (product) {
-      // Finde die Farbe, die mit der im Warenkorb übereinstimmt
+      // Find the color that matches the one in the cart
       const colorData = product.colors.find(
         (color) => color.color === cartItem.color,
       );
@@ -25,10 +25,10 @@ export const getCartProductDetails = () => {
         quantity: cartItem.quantity,
       };
     } else {
-      return null; // Falls das Produkt nicht gefunden wird
+      return null; // Return null if the product is not found
     }
   });
 
-  // Filtere eventuell ungültige Einträge heraus (falls ein Produkt nicht gefunden wurde)
+  // Filter out any invalid entries (in case a product was not found)
   return productDetails.filter((item) => item !== null);
 };

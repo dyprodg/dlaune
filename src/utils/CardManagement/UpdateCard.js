@@ -1,23 +1,23 @@
 import Cookies from "js-cookie";
 
-// Funktion zum Anpassen der Menge eines Warenkorbeintrags
+// function for updating cart item quantity
 export const updateCartItemQuantity = (id, color, size, newQuantity) => {
   const cart = Cookies.get("cart") ? JSON.parse(Cookies.get("cart")) : [];
 
   const updatedCart = cart
     .map((item) => {
-      // Finde das Produkt mit passender ID, Farbe und Größe
+      // find product with id color and size
       if (item.id === id && item.color === color && item.size === size) {
         return { ...item, quantity: newQuantity };
       }
       return item;
     })
-    .filter((item) => item.quantity > 0); // Entferne Einträge mit quantity <= 0
+    .filter((item) => item.quantity > 0); // if quantity 0 delete
 
   Cookies.set("cart", JSON.stringify(updatedCart), { expires: 7 });
 };
 
-// Funktion zum Entfernen eines Warenkorbeintrags
+// function for cart item delete
 export const removeCartItem = (id, color, size) => {
   const cart = Cookies.get("cart") ? JSON.parse(Cookies.get("cart")) : [];
 
